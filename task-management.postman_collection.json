@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "1a98d2a8-6f77-486c-a73e-976258cc1d9d",
+		"name": "task-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31646925"
+	},
+	"item": [
+		{
+			"name": "user-registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"kamrans6@gmail.com\",\n    \"password\":\"Ks1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3501/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3501",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"kamrans6@gmail.com\",\n    \"password\":\"Ks1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3501/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3501",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-All-Task",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImthbXJhbnM2QGdtYWlsLmNvbSIsInJvbGVzIjpbIkVtcGxveWVlIl19LCJpYXQiOjE3MDE5OTY2MTMsImV4cCI6MTcwMTk5NzUxM30.xWDeQTUHmodePO67Zzod67oVD-zyeO0lJUHZ0x7a7Pg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3501/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3501",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImthbXJhbnM2QGdtYWlsLmNvbSIsInJvbGVzIjpbIkVtcGxveWVlIl19LCJpYXQiOjE3MDIwMTYyNzEsImV4cCI6MTcwMjAxNzE3MX0.HCl1eMqtySv1Xdyv2Sa9Nkzn5FAd3Sk4R7KlkB2eyOU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{ \n    \"user\": \"65728bb0f6dd382a8e889698\",\n    \"title\":\"nodejs Developer\", \n    \"text\":\"nodejs\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All-Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImthbXJhbnM2QGdtYWlsLmNvbSIsInJvbGVzIjpbIkVtcGxveWVlIl19LCJpYXQiOjE3MDIwMDU2OTUsImV4cCI6MTcwMjAwNjU5NX0.BCCF0LQ7F2wIxbhrJRzwfMYFhPC1qq6dRvUF1eCA-kw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3500/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
